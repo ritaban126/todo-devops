@@ -63,7 +63,7 @@ jobs:
         with:
           node-version: 20
 
-      # ---------------- BACKEND ----------------
+      # BACKEND 
       - name: Install backend dependencies
         working-directory: backend
         run: npm ci
@@ -72,7 +72,7 @@ jobs:
         working-directory: backend
         run: npm run lint -- --max-warnings=0
 
-      # ---------------- FRONTEND ----------------
+      # FRONTEND 
       - name: Install frontend dependencies
         working-directory: frontend
         run: npm ci
@@ -81,7 +81,7 @@ jobs:
         working-directory: frontend
         run: npm run lint -- --max-warnings=0
 
-      # ---------------- DOCKER ----------------
+      # DOCKER 
       - name: Build backend Docker image
         run: docker build -t backend ./backend
 
